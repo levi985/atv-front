@@ -2,13 +2,45 @@ body {
     background-color: rgb(7, 7, 32);
     font-family: Arial, Helvetica, sans-serif;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
+/* Estilos da Navbar */
+.navbar {
+    background-color: rgb(11, 11, 54);
+    padding: 1rem 2rem;
     display: flex;
-    border: 1;
-    background-color:rgb(10, 10, 49);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+.logo h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #a8a8a8;
+}
+
 
 div{
     background-color: rgb(11, 11, 54);
