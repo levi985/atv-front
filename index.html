@@ -1,39 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade Avançada de CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="logo">
                 <h2>Minha Página</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#inicio" class="nav__link">Início</a></li>
+                <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                <li><a href="#contato" class="nav__link">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <div>
-        <h1>
-            Bem-vindo(a)!
-        </h1>
-        <p>
-            está é uma atividade de <strong>CSS avançado</strong> com layout moderno.
-        </p>
-        <button>
-            Começa
-        </button>
-    </div>
-    <div>
-        <h2>
-            sobre
-        </h2>
-    </div>
+    
+    <main id="principal" class="content">
+        <section class="hero">
+            <div class="main-content">
+                <div class="div-inicio card">
+                    <h1>Bem-vindo(a)!</h1>
+                    <p class="introducao">Esta é uma atividade de <strong>CSS avançado</strong> com layout moderno.</p>
+                    <button class="btn">Começar</button>
+                </div>
+                
+                <div class="right-sidebar">
+                    <div class="dica-rapida card">
+                        <h3>Dica Rápida</h3>
+                        <p>Use <code>box-sizing: border-box</code> para facilitar o cálculo de larguras.</p>
+                        <a href="#topo" class="link">Voltar ao topo</a>
+                    </div>
+                    
+                    <div class="links-uteis card">
+                        <h3>Links Úteis</h3>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="link">MDN CSS</a></li>
+                            <li><a href="https://css-tricks.com/" target="_blank" class="link">CSS-Tricks</a></li>
+                            <li><a href="https://web.dev/learn/css/" target="_blank" class="link">web.dev CSS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="content-layout">
+            <div class="left-column">
+                <section class="sobre-section">
+                    <div class="sobre-card card">
+                        <h2>Sobre</h2>
+                        <p>Nesta página você praticará seletores avançados, pseudo-classes, pseudo-elementos, transições, box model, positioning e layout com Flexbox e CSS Grid.</p>
+                        <ul>
+                            <li>✓ Seletores combinados e de atributo</li>
+                            <li>✓ Pseudo-classes (:hover, :focus, :first-child)</li>
+                            <li>✓ Pseudo-elementos (::before, ::after)</li>
+                            <li>✓ Transições e efeitos</li>
+                            <li>✓ Responsividade com @media</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section class="servicos-section">
+                    <div class="servicos-container card">
+                        <h2>Serviços</h2>
+                        <div class="servicos-grid services__grid">
+                            <div class="servico-card">
+                                <h3>Layout Responsivo</h3>
+                                <p>Monte páginas que se adaptam a qualquer tela.</p>
+                                <button class="btn">Saiba mais</button>
+                            </div>
+                            <div class="servico-card">
+                                <h3>Componentes Reutilizáveis</h3>
+                                <p>Crie cartões, botões e barras de navegação escaláveis.</p>
+                                <button class="btn">Saiba mais</button>
+                            </div>
+                            <div class="servico-card">
+                                <h3>Acessibilidade</h3>
+                                <p>Aprenda boas práticas para tornar sua UI inclusiva.</p>
+                                <button class="btn">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2024 - Atividade Avançada de CSS</p>
+    </footer>
 </body>
 </html>

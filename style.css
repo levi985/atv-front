@@ -1,56 +1,278 @@
-body {
-    background-color: rgb(7, 7, 32);
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    margin: 0;
-    padding: 0;
+:root {
+    --primary: #0066ff;
+    --success: #10b981;
+    --bg-dark: rgb(7, 7, 32);
+    --card-bg: rgb(25, 25, 45);
+    --card-bg-light: rgb(35, 35, 65);
 }
 
-/* Estilos da Navbar */
-.navbar {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: var(--bg-dark);
+    line-height: 1.6;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
     background-color: rgb(11, 11, 54);
+}
+
+.navbar {
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.logo h2 {
-    color: white;
-    margin: 0;
-    font-size: 1.5rem;
 }
 
 .nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 2rem;
 }
 
-.nav-links li a {
-    color: white;
+.nav-links a {
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #a8a8a8;
+/* Main content */
+.content {
+    margin-top: 80px;
+    padding: 2rem;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Hero section */
+.hero {
+    margin-bottom: 2rem;
+}
 
-div{
+.main-content {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/* Sidebar direita vertical */
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 280px;
+}
+
+/* Layout de duas colunas para o conteúdo principal */
+.content-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.left-column {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Cards básicos */
+.card {
+    background: linear-gradient(135deg, var(--card-bg), var(--card-bg-light));
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+.div-inicio {
+    flex: 1;
+    max-width: 600px;
+}
+
+.div-inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.div-inicio p {
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: #0052cc;
+    transform: translateY(-2px);
+}
+
+.dica-rapida {
+    width: 100%;
+}
+
+.dica-rapida h3 {
+    margin-bottom: 1rem;
+}
+
+.dica-rapida p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.dica-rapida .link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Sobre section */
+.sobre-card {
+    margin-bottom: 2rem;
+}
+
+.sobre-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-card p {
+    margin-bottom: 1.5rem;
+}
+
+.sobre-card ul {
+    list-style: none;
+}
+
+.sobre-card li {
+    margin-bottom: 0.5rem;
+    color: var(--success);
+}
+
+/* Serviços */
+.servicos-section {
+    margin-bottom: 2rem;
+}
+
+.servicos-container {
+    padding: 2rem;
+}
+
+.servicos-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.servico-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servico-card h3 {
+    margin-bottom: 1rem;
+}
+
+.servico-card p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Links úteis */
+.links-uteis {
+    width: 100%;
+}
+
+.links-uteis h3 {
+    margin-bottom: 1rem;
+}
+
+.links-uteis ul {
+    list-style: disc;
+    margin-left: 1rem;
+}
+
+.links-uteis li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.links-uteis .link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(11, 11, 54);
-    border-top-right-radius: 3%;
-    border-top-left-radius: 3%;
-    border: 1;
-    border-color: black;
+    padding: 1rem;
+    text-align: center;
 }
 
-button{
-    background-color: blueviolet;
-    color: #ffffff;
+/* Media Queries simplificados */
+@media (max-width: 1024px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-sidebar {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 1rem;
+        margin-top: 70px;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-sidebar {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 720px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
 }
