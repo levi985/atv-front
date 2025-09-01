@@ -7,54 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <h2>Minha Página</h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#inicio" class="nav__link">Início</a></li>
-                <li><a href="#sobre" class="nav__link">Sobre</a></li>
-                <li><a href="#servicos" class="nav__link">Serviços</a></li>
-                <li><a href="#contato" class="nav__link">Contato</a></li>
-            </ul>
-            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-            <button class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
-    
-    <main id="principal" class="content">
-        <section class="hero">
-            <div class="main-content">
-                <div class="div-inicio card">
-                    <h1>Bem-vindo(a)!</h1>
-                    <p class="introducao">Esta é uma atividade de <strong>CSS avançado</strong> com layout moderno.</p>
-                    <button class="btn">Começar</button>
-                </div>
-                
-                <div class="right-sidebar">
-                    <div class="dica-rapida card">
-                        <h3>Dica Rápida</h3>
-                        <p>Use <code>box-sizing: border-box</code> para facilitar o cálculo de larguras.</p>
-                        <a href="#topo" class="link">Voltar ao topo</a>
-                    </div>
-                    
-                    <div class="links-uteis card">
-                        <h3>Links Úteis</h3>
-                        <ul>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="link">MDN CSS</a></li>
-                            <li><a href="https://css-tricks.com/" target="_blank" class="link">CSS-Tricks</a></li>
-                            <li><a href="https://web.dev/learn/css/" target="_blank" class="link">web.dev CSS</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+    <header>
         <div class="content-layout">
             <div class="left-column">
                 <section class="sobre-section">
@@ -93,6 +46,22 @@
                         </div>
                     </div>
                 </section>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="content-layout">
+            <div class="left-column">
+                <h1>
+                    Bem-vindo(a)!
+                </h1>
+                <p>
+                    Esta é uma atividade de <strong>CSS avançado</strong> com layout moderno.
+                </p>
+                <button class="btn">
+                    Começar
+                </button>
             </div>
         </div>
     </main>
