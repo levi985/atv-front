@@ -14,7 +14,6 @@
     --transition: 0.2s ease;
 }
 
-/* Tema claro */
 [data-theme="light"] {
     --bg-primary: var(--bg-light);
     --card-primary: var(--card-bg-light-theme);
@@ -22,7 +21,6 @@
     --shadow-primary: var(--shadow-light);
 }
 
-/* Tema escuro (padrão) */
 [data-theme="dark"] {
     --bg-primary: var(--bg-dark);
     --card-primary: var(--card-bg);
@@ -44,7 +42,6 @@ body {
     transition: var(--transition);
 }
 
-/* Header fixo */
 .header {
     position: fixed;
     top: 0;
@@ -58,6 +55,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
@@ -69,6 +67,7 @@ body {
 .nav-links a {
     text-decoration: none;
     transition: var(--transition);
+    color: white;
 }
 
 .nav__link:hover,
@@ -78,7 +77,18 @@ body {
     outline-offset: 2px;
 }
 
-/* Main content */
+ul li {
+    margin: 4px 0;
+}
+
+a[target="_blank"] {
+    text-decoration: underline;
+}
+
+a[target="_blank"]:hover {
+    text-decoration: none;
+}
+
 .content {
     margin-top: 80px;
     padding: 2rem;
@@ -88,7 +98,6 @@ body {
     margin-right: auto;
 }
 
-/* Hero section com gradiente */
 .hero {
     margin-bottom: 2rem;
     background: linear-gradient(135deg, rgba(25, 25, 45, 0.1), rgba(35, 35, 65, 0.1));
@@ -109,7 +118,6 @@ body {
     pointer-events: none;
 }
 
-/* Grid layout para duas colunas */
 .main-content {
     display: grid;
     grid-template-columns: 1fr 280px;
@@ -118,7 +126,6 @@ body {
     justify-content: center;
 }
 
-/* Sidebar direita vertical */
 .right-sidebar {
     display: flex;
     flex-direction: column;
@@ -126,7 +133,6 @@ body {
     width: 100%;
 }
 
-/* Cards básicos com pseudo-elementos */
 .card {
     background: linear-gradient(135deg, var(--card-primary), var(--card-bg-light));
     border-radius: 20px;
@@ -161,7 +167,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Pseudo-elemento para primeira letra */
 .introducao::first-letter {
     font-size: 2.5em;
     font-weight: bold;
@@ -214,7 +219,6 @@ body {
     color: #0052cc;
 }
 
-/* Layout de duas colunas para o conteúdo principal */
 .content-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -226,7 +230,6 @@ body {
     width: 100%;
 }
 
-/* Sobre section */
 .sobre-card {
     margin-bottom: 2rem;
 }
@@ -250,7 +253,6 @@ body {
     color: var(--success);
 }
 
-/* Serviços */
 .servicos-section {
     margin-bottom: 2rem;
 }
@@ -293,7 +295,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Links úteis */
 .links-uteis {
     width: 100%;
 }
@@ -322,7 +323,6 @@ body {
     color: #0052cc;
 }
 
-/* Footer */
 .footer {
     position: fixed;
     bottom: 0;
@@ -332,7 +332,6 @@ body {
     text-align: center;
 }
 
-/* Toggle de tema */
 .theme-toggle {
     background: var(--primary);
     color: white;
@@ -349,7 +348,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Menu hambúrguer */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -368,7 +366,6 @@ body {
     border-radius: 2px;
 }
 
-/* Keyframes para animações */
 @keyframes slideIn {
     from {
         transform: translateX(-100%);
@@ -400,7 +397,6 @@ body {
     }
 }
 
-/* Aplicando animações */
 .card {
     animation: fadeIn 0.6s ease-out;
 }
@@ -409,7 +405,6 @@ body {
     animation: glow 2s infinite;
 }
 
-/* Media Queries simplificados */
 @media (max-width: 1024px) {
     .services__grid {
         grid-template-columns: repeat(2, 1fr);
