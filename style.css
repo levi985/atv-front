@@ -232,16 +232,19 @@ a[target="_blank"]:hover {
 
 .sobre-card {
     margin-bottom: 2rem;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border: 2px solid #ffffff;
 }
 
 .sobre-card h2 {
     font-size: clamp(1.5rem, 3vw, 1.8rem);
     margin-bottom: 1rem;
+    color: #ffffff;
 }
 
 .sobre-card p {
     margin-bottom: 1.5rem;
-    color: var(--muted);
+    color: #ffffff;
 }
 
 .sobre-card ul {
@@ -250,7 +253,7 @@ a[target="_blank"]:hover {
 
 .sobre-card li {
     margin: 4px 0;
-    color: var(--success);
+    color: #ffffff;
 }
 
 .servicos-section {
